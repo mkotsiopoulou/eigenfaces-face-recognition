@@ -1,58 +1,49 @@
-# eigenfaces-face-recognition
-Face recognition using Eigenfaces and Principal Component Analysis (PCA).
-## Overview
-This project applies the Eigenfaces method for face recognition using PCA. The goal is to reduce the dimensionality of face images while preserving the most important facial features for classification.
+# Eigenfaces Face Recognition
+## Project Overview
+This project implements a face recognition workflow using the Eigenfaces method and Principal Component Analysis (PCA). The objective is to reduce the dimensionality of facial images while preserving the most discriminative information for face recognition. The project demonstrates core concepts in computer vision, dimensionality reduction, feature extraction, and machine learning-based recognition.
+
+---
+
+## Methodology
 The workflow includes:
-- Loading the Olivetti faces dataset
-- Preprocessing face images
-- Applying PCA for feature extraction
-- Visualizing the average face
-- Analyzing explained variance
-- Evaluating classification performance
+1. Loading the Olivetti faces dataset
+2. Preprocessing face images
+3. Computing the average face
+4. Applying PCA for dimensionality reduction
+5. Extracting eigenfaces as principal visual components
+6. Training and evaluating a face recognition classifier on PCA-transformed features
+7. Evaluating recognition performance using a confusion matrix
+
+---
+
+## Sample Results
+The following examples illustrates the complete Eigenfaces workflow, from facial image preprocessing and principal component extraction to classification performance evaluation.
+### Eigenfaces Visualization
+The eigenfaces represent the main patterns of variation across the facial image dataset.
+![Eigenfaces Visualization](results/eigenfaces_visualization.png)
+### Average Face
+The average face summarizes the common facial structure across the dataset.
+![Average_face](results/average_face.png)
+### Explained Variance Analysis
+The explained variance plot shows how much information is retained by the selected principal components.
+![Explained Variance Analysis](results/explained_variance_analysis.png)
+### Confusion Matrix
+The confusion matrix provides a visual overview of the model's classification performance.
+![Confuson Matrix](results/confusion_matrix.png)
+
+---
 
 ## Technologies Used
 - Python
-- Jupyter Notebook
 - NumPy
 - scikit-learn
 - Matplotlib
-- PCA
+- Jupyter Notebook
+- Principal Component Analysis (PCA)
 - Machine Learning
 
-## Files
-- `notebooks/olivetti.ipynb`
-- `data/olivetti.mat`
-- `results/eigenfaces_visualization.png`
-- `results/explained_variance_analysis.png`
-- `results/average_face.png`
-- `results/pca_explained_variance_plot.png`
-- `results/confusion_matrix.png`
+---
 
 ## Dataset
-This project uses the Olivetti Faces dataset provided by A&T Laboratories Cambridge and available through scikit-learn.
+This project uses the Olivetti Faces dataset, available through scikit-learn.
 [Olivetti Faces Dataset](https://scikit-learn.org/0.19/datasets/olivetti_faces.html).
-
-## Results
-### Eigenfaces Visualization
-![Eigenfaces_Visualization](results/eigenfaces_visualization.png)
-### Average Face
-![Average Face](results/average_face.png)
-### Explained Variance Analysis
-![Explained Variance Analysis](results/pca_explained_variance_plot.png)
-### Confusion Matrix
-![Confusion Matrix](results/confusion_matrix.png)
-
-## Methodology
-PCA was applied to extract the most important components from the face images. These principal components, represent the dominant patterns in the dataset and allow dimensionality reduction before classification.
-The model performance was evaluated using a confusion matrix and classification metrics.
-
-## Applications
-This project can be applied in:
-- Face recognition
-- Pattern recognition
-- Computer vision
-- Dimensionality reduction
-- Machine learning
-
-## Author
-Marina Kotsiopoulou
